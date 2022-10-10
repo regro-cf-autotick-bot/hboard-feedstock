@@ -1,5 +1,5 @@
 {% set name = "hboard" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/HyperBoard/archive/refs/tags/{{ version }}.tar.gz
-  sha256: bd2d4f08937f0991c28b2489b0c11f69eda71dea6587a0debb89682581e1be03
+  sha256: f4d31adca1b9d631eca2e87267277884a5cde81a2b532693bfb4003dea1e0e66
 
 build:
   noarch: python
   number: 0
-  script: "cd hboard && {{ PYTHON }} -m pip install . -vv"
+  script: cd hboard && {{ PYTHON }} -m pip install . -vv
   entry_points:
     - hboard = hboard.cli:main
 
@@ -38,7 +38,7 @@ about:
   home: https://github.com/DataCanvasIO/HyperBoard
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'Hypernets experiment visualization base on webpage.'
+  summary: Hypernets experiment visualization base on webpage.
   description: |
     This project provides a web based visualization tool for experiment information. In general, Hypernets writes the experiment events into a text file. This tool could monitor the file and make these events visible.
   doc_url: https://hypernets.readthedocs.io
