@@ -1,5 +1,5 @@
 {% set name = "hboard" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DataCanvasIO/HyperBoard/archive/refs/tags/{{ version }}.tar.gz
-  sha256: bd2d4f08937f0991c28b2489b0c11f69eda71dea6587a0debb89682581e1be03
+  sha256: 261ed8b45cd45bfbc2f4cf7a84a4186731194c75a98491021e02acf0a44d59a3
 
 build:
   noarch: python
