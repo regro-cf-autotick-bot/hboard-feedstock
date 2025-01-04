@@ -11,17 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "cd hboard && {{ PYTHON }} -m pip install . -vv"
   entry_points:
     - hboard = hboard.cli:main
 
 requirements:
   host:
-    - python >=3.6, <3.10
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6, <3.10
+    - python >={{ python_min }},<3.10
     - hypernets >=0.2.5.1, <0.2.6
     - tornado
 
@@ -31,6 +31,7 @@ test:
     - hboard.tests
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
